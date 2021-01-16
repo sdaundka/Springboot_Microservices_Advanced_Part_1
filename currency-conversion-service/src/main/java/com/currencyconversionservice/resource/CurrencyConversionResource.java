@@ -41,7 +41,7 @@ public class CurrencyConversionResource {
 		return currencyConversionBean;
 	}
 	
-	@GetMapping("/feign/from/{from}/to/{to}/quantity/{quantity}")
+	@GetMapping(value = "/feign/from/{from}/to/{to}/quantity/{quantity}", produces = "application/json")
 	public CurrencyConversionBean convertCurrencyUsingFeign(@PathVariable String from, @PathVariable String to, @PathVariable BigDecimal quantity) {
 		CurrencyConversionBean currencyConversionBean = currencyExchangeServiceProxy.getExchange(from, to);		
 		if(currencyConversionBean != null) {

@@ -8,6 +8,7 @@ public class CurrencyConversionBean {
 	private String from;
 	private String to;
 	private BigDecimal conversionMultiple;
+	private String port;
 	private BigDecimal quantity;
 	private BigDecimal totalCalculatedAmount;
 	
@@ -16,13 +17,14 @@ public class CurrencyConversionBean {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public CurrencyConversionBean(int id, String from, String to, BigDecimal conversionMultiple, BigDecimal quantity,
+	public CurrencyConversionBean(int id, String from, String to, BigDecimal conversionMultiple, String port, BigDecimal quantity,
 			BigDecimal totalCalculatedAmount) {
 		super();
 		this.id = id;
 		this.from = from;
 		this.to = to;
 		this.conversionMultiple = conversionMultiple;
+		this.port = port;
 		this.quantity = quantity;
 		this.totalCalculatedAmount = totalCalculatedAmount;
 	}
@@ -73,6 +75,14 @@ public class CurrencyConversionBean {
 
 	public void setTotalCalculatedAmount(BigDecimal totalCalculatedAmount) {
 		this.totalCalculatedAmount = totalCalculatedAmount;
+	}
+
+	public String getPort() {
+		return port;
+	}
+
+	public void setPort(String port) {
+		this.port = port;
 	}
 	
 }
